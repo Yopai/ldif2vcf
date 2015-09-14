@@ -1,0 +1,39 @@
+[en]
+Conversion script from LDIF format (as, for example, exported by Thunderbird) to the VCF format, used by lots of tools (for example, Roundcube)
+
+1) From Thunderbird, export your address book in LDIF format
+  (Warning, there's a bug with LDAP address books, see https://bugzilla.mozilla.org/show_bug.cgi?id=546094)
+2) Open a terminal in the script's directory
+3) Run :
+  python ldif2vcf.py -f "/absolute/path/to/file.ldif" -o "/absolute/path/to/file.vcf"
+  Notes :
+    - It really needs the ABSOLUTE path
+    - Under Windows, absolute path begins by the drive letter and is written with \, ex :
+       C:\Documents and Settings\toto\my-file.ldif
+4) Import the resulting .vcf file
+
+The author :
+I found this script on a blog (in french) :
+http://astuces.absolacom.com/serveur/convertir-un-carnet-dadresse-ldif-en-vcf-thunderbird-vers-roundcube/
+
+Waiting for his answer, I created this Github repository for corrections/evolutions handling.
+
+[fr]
+Script de conversion d'un fichier au format LDIF (par ex : export depuis Thunderbird) vers le format VCF utilisé par de nombreux outils (par ex : RoundCube)
+
+1) Depuis Thunderbird, exporter votre carnet d'adresses au format LDIF
+  (Attention, il y a un bug avec les carnets d'adresses LDAP, cf https://bugzilla.mozilla.org/show_bug.cgi?id=546094)
+2) Ouvrir une ligne de commande au niveau du script
+3) Exécuter :
+  python ldif2vcf.py -f "/chemin/absolu/vers/mon/fichier.ldif" -o "/chemin/absolu/vers/mon/fichier.vcf"
+  Notes :
+    - C'est bien le chemin ABSOLU qui doit être indiqué
+    - Sous Windows, le chemin absolu commence par la lettre de lecteur et s'écrit avec des \, ex :
+       C:\Documents and Settings\toto\mon-fichier.ldif
+4) Importer le fichier vcf ainsi obtenu
+
+L'auteur :
+J'ai trouvé ce script sur un blog :
+http://astuces.absolacom.com/serveur/convertir-un-carnet-dadresse-ldif-en-vcf-thunderbird-vers-roundcube/
+
+En l'attente de sa réponse, j'ai créé ce dépôt Github pour gérer les corrections / évolutions.
