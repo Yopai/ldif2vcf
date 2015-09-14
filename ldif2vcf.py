@@ -62,7 +62,7 @@ def create_vcard(nom, prenom, nomaffiche, mail, telephoneNumber, fileout):
         sortie.write("FN:%s\n" % nomaffiche)
         sortie.write("N:%s;%s;;;\n" % (nom, prenom))
         sortie.write("EMAIL;type=INTERNET;type=HOME;type=pref:%s\n" % mail)
-        sortie.write("TEL;TYPE=HOME,VOICE:%s" % telephoneNumber)
+        sortie.write("TEL;TYPE=HOME,VOICE:%s\n" % telephoneNumber)
         sortie.write("END:VCARD\n")
         sortie.close()
 
